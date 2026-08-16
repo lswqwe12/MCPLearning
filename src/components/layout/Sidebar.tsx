@@ -59,8 +59,9 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
   useEffect(() => {
     const match = location.pathname.match(/^\/knowledge\/(.+)$/);
     if (!match || !navRef.current) return;
+    // href 含 basename 前缀，用「以…结尾」匹配以兼容子路径部署
     const link = navRef.current.querySelector<HTMLAnchorElement>(
-      `a[href="/knowledge/${match[1]}"]`,
+      `a[href$="/knowledge/${match[1]}"]`,
     );
     link?.scrollIntoView({ block: 'nearest' });
   }, [location.pathname]);

@@ -4,10 +4,9 @@ import { fileURLToPath, URL } from 'node:url';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // GitHub Pages 自定义域名下站点位于根路径，使用 '/'。
-  // 若改为部署到项目子路径（https://<user>.github.io/<repo>/），
-  // 请将 base 改为 '/<repo>/'（如 '/MCPLearning/'）。
-  base: '/',
+  // 部署到 GitHub Pages 项目子路径：https://lswqwe12.github.io/MCPLearning/
+  // 若以后改用自定义域名（根路径），改回 base: '/' 即可。
+  base: '/MCPLearning/',
   plugins: [react()],
   resolve: {
     alias: {

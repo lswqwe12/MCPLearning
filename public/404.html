@@ -6,13 +6,14 @@
     <title>MCP Learning Hub</title>
     <script>
       // GitHub Pages 单页应用（SPA）回退：
-      // 直接访问 /knowledge/xxx 等深层路由时，静态托管找不到对应文件，
+      // 直接访问 /MCPLearning/knowledge/xxx 等深层路由时，静态托管找不到对应文件，
       // 会返回本 404.html。这里把原路径暂存到 sessionStorage 再跳回首页，
       // 由 src/main.tsx 在挂载前还原路径，从而命中正确页面。
+      // 注意：'/MCPLearning/' 与 vite.config.ts 中的 base 保持一致。
       (function () {
         var path = window.location.pathname + window.location.search + window.location.hash;
         sessionStorage.setItem('gh-pages-redirect', path);
-        window.location.replace('/');
+        window.location.replace('/MCPLearning/');
       })();
     </script>
   </head>
