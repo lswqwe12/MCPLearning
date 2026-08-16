@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(ls *.json *.js *.ts *.html)",
+      "Bash(mv 07-workflow.md 08-workflow.md)",
+      "Bash(mv 08-communication.md 09-communication.md)",
+      "Bash(mv 09-examples.md 12-examples.md)",
+      "Bash(ls -la README*)"
+    ]
+  }
+}
